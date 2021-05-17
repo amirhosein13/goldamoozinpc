@@ -1,0 +1,53 @@
+﻿@model IEnumerable<layedata.soal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.soaltitr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.soalmatn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zamimesoal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dore)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.soaltitr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soalmatn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zamimesoal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dore.dorematn)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.soalid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.soalid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.soalid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

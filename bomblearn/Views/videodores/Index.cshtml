@@ -1,0 +1,79 @@
+﻿@model IEnumerable<layedata.videodore>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@section css{
+    <link href="~/data/css/cssdore.css" rel="stylesheet" />
+}
+<div class="ui container txtright">
+    <h2> ویدعو های :@ViewBag.dorename</h2>
+
+    <p>
+        <a href="/videodores/Create">(اضافه کزدن(برای هر دوره ای میتواند باشد )(دوره های شما</a>
+    </p>
+    <div class="gridkhodam">
+        @{ int a = 0;
+            int b = 1;
+            foreach (var item in Model)
+            {
+                if (a < 3 && item.dore.dorehgaymat != 0)
+                {
+                    <div class="ui link cards colgalasedore">
+                        <div class="card carddore w_100">
+                            <div>
+                                <div class="containerkhodam">
+                                    <span class="addadvideo">@b</span>
+                                    <h3 class="txtright paddingh3dore">
+                                        <span class="colorgreen floatleft">رایگان</span>@item.videoname
+                                    </h3>
+                                    <a href="@(item.urlvideo)"><button class="positive ui button w_100">دانلود</button></a>
+                                    <a asp-action="Edit" asp-route-id="@item.videoid"><button class="positive ui button w_100">Edit</button></a>
+                                    <a asp-action="Details" asp-route-id="@item.videoid"><button class="positive ui button w_100">Details</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    a++;
+                }
+                else if (item.dore.dorehgaymat != 0)
+                {
+                    <div class="ui link cards colgalasedore">
+                        <div class="card carddore w_100">
+                            <div>
+                                <div class="containerkhodam">
+                                    <span class="addadvideo">@b</span>
+                                    <h3 class="txtright paddingh3dore">
+                                        <span class="colorgreen floatleft">نقدی</span>@item.videoname
+                                    </h3>
+                                    <a href="@(item.urlvideo)"><button class="positive ui button w_100">دانلود</button></a>
+                                    <a asp-action="Edit" asp-route-id="@(item.videoid)"><button class="positive ui button w_100">Edit</button></a>
+                                    <a asp-action="Details" asp-route-id="@item.videoid"><button class="positive ui button w_100">Details</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="ui link cards colgalasedore">
+                        <div class="card carddore w_100">
+                            <div>
+                                <div class="containerkhodam">
+                                    <span class="addadvideo">@b</span>
+                                    <h3 class="txtright paddingh3dore">
+                                        <span class="colorgreen floatleft">رایگان</span>@item.videoname
+                                    </h3>
+                                    <a href="@(item.urlvideo)"><button class="positive ui button w_100">دانلود</button></a>
+                                    <a asp-action="Edit" asp-route-id="@item.videoid"><button class="positive ui button w_100">Edit</button></a>
+                                    <a asp-action="Details" asp-route-id="@item.videoid"><button class="positive ui button w_100">Details</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                b++;
+            }
+        }
+    </div>
+</div>

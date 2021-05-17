@@ -1,0 +1,28 @@
+﻿@model layedata.soal
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@section css{
+    <link href="~/data/css/soalcss.css" rel="stylesheet" />
+}
+
+<section class="sec2soalcreate">
+    <div class="ui container txtright">
+        <h3>ثبت سوال</h3>
+        <div asp-validation-summary="All" class="txtdanger txtright"></div>
+        <form asp-action="createa" method="post" enctype="multipart/form-data">
+            <label for="fname">تیتر سوال</label>
+            <input asp-for="soaltitr" class="txtright" type="text" id="fname" placeholder="... تیتر سوال">
+            <label for="subject">متن سوال</label>
+            <textarea asp-for="soalmatn" class="txtright" id="subject" placeholder="متن سوال"
+                      style="height:200px"></textarea>
+
+            <label for="lname txtright"> فایل پیوست (حجم فایل باید کمتر از 2 مگابایت باشد در غیر اینصورت ازسال نمیشود)</label>
+            <br>
+            <input asp-for="doreid" class="inpsoalcre d_none dis txtright" type="text" id="lname" value="@(ViewBag.iddore)">
+            <input class="inpsoalcre txtright" type="file" id="lname" name="imageup">
+            <br>
+            <input type="submit" value="ثبت">
+        </form>
+    </div>
+
+</section>

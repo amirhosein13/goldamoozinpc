@@ -1,0 +1,351 @@
+﻿@model datacore.indexviewmodel
+
+@section css{
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+}
+
+@{
+    ViewData["Title"] = " گلد آموز : آموزش تخصصی برنامه نویسی ";
+    ViewData["descripthin"] = "گلد آموز با اراعه جدید ترین آموزش های برنامه نویسی و با بهترین تدریس های برنامه نویسی به شما کمک میکند تا بتوانید بهتر باد بگیرید";
+}
+<section>
+    <div class="ui inverted vertical masthead center aligned segment bktop">
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu nullborder">
+
+                <div class="left item">
+
+                    @{ if (User.Identity.IsAuthenticated)
+                        {
+                            <a href="/userpanel">
+                                <p class="item active disblock">خوش آمدید @User.Identity.Name</p>
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="/login" class="ui inverted button">ورود</a>
+                            <a href="/login" class="ui inverted button">ثبت نام</a>
+                        }
+                    }
+
+                </div>
+                <cache expires-after="@TimeSpan.FromDays(1)">
+
+                    <a class="toc item" id="sidebar">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a class="item itemnavtop" href="/alldore">آخرین دوره ها</a>
+                    <a class="item itemnavtop" href="/allblog">بلاگ</a>
+                    <a class="item itemnavtop" href="/soal">سوالات</a>
+                    <a class="item itemnavtop" href="/index">خانه</a>
+                </cache>
+            </div>
+        </div>
+
+        <div class="ui text container">
+            <h1 class="ui inverted header">آموزش برنامه نویسی، تمرین ، سوال و پرسش همه در گلد آموز</h1>
+            <h2></h2>
+            <form action="/getdoreby" method="post">
+                <div class="container ">
+                    <div class="ui w_100 icon input">
+                        <input class="prompt txtright inputsoalsearch inputindexsearchbala" name="searchinput" id="searchsoal" type="text" placeholder="چی میخوای یاد بگیری ؟">
+                        <button class="btnsearchinputbalaindex"> <i class="search icon"></i></button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+<cache expires-after="@TimeSpan.FromMinutes(30)">
+    <section class="margindoreha sec2">
+        <div class="ui container">
+            <h2 class="h2sartitr textcenter">آخرین دوره ها</h2>
+            <div class="gridkhodam">
+                @{int a = 0;
+                    foreach (var item in Model.akharindoreha)
+                    {
+                        if (a % 4 == 0)
+                        {
+                            <div class="col_bala">
+                                <div class="ui link cards tooltip">
+                                    <div class="tooltiptext navlayoutbala">
+                                        <div class="containerkhodam">
+                                            <h3 class="txtright">@item.dorename</h3>
+                                            <p class="txtright">آخرین بروزرسانی :@item.doreakharinberoozresany</p>
+                                            <p class="txtright fontsize_14">تعداد جلسات تدریس:@item.doretedadgalase جلسه</p>
+                                            <p class="txtright fontsize_14">سطح دوره : @item.doresath</p>
+                                            <p class="txtright">
+                                                @item.shortmatn
+                                            </p>
+                                            <a title="@item.dorename" href="/dore/@(item.doreid)"><button class="positive ui button">ادامه مطلب</button></a>
+                                        </div>
+                                    </div>
+                                    <a title="@item.dorename" href="/dore/@(item.doreid)">
+                                        <div class="card w_100">
+                                            <div class="image">
+                                                <img class="w_100 h_100" alt="@item.dorename" title="@item.dorename" src="@item.doreimageurl">
+                                            </div>
+                                            <div class="content balapost">
+                                                <div class="header txtright font_14">
+                                                    <h2 class="txtright coloblack font_14 h2post">@item.dorename</h2>
+                                                </div>
+                                                <div class="description txtright">
+                                                    <a title="@item.dorename" class="textblack">@item.doremodars</a>
+                                                </div>
+                                            </div>
+                                            <div class="extra content">
+                                                @if (item.dorebargozary == true)
+                                                {
+                                                    <span class="right floated span1post">به اتمام رسیده</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="right floated span1post">درحال برگزاری</span>
+                                                }
+                                                @if (item.dorehgaymat == 0)
+                                                {
+                                                    <span class="span2post">
+                                                        رایگان
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="span2post">
+                                                        @item.dorehgaymat تومان
+                                                    </span>
+                                                }
+
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            a++;
+                        }
+                        else
+                        {
+                            <div class="col_bala">
+                                <div class="ui link cards tooltip2">
+                                    <div class="tooltiptext2">
+                                        <div class="containerkhodam">
+                                            <h3 class="txtright">@item.dorename</h3>
+                                            <p class="txtright">آخرین بروزرسانی :@item.doreakharinberoozresany</p>
+                                            <p class="txtright fontsize_14">تعداد جلسات تدریس:@item.doretedadgalase جلسه</p>
+                                            <p class="txtright fontsize_14">سطح دوره : @item.doresath</p>
+                                            <p class="txtright">
+                                                @item.shortmatn
+                                            </p>
+                                            <a title="@item.dorename" href="/dore/@(item.doreid)"></a> <button class="positive ui button">ادامه مطلب</button>
+                                        </div>
+                                    </div>
+                                    <a title="@item.dorename" href="/dore/@(item.doreid)">
+                                        <div class="card w_100">
+                                            <div class="image">
+                                                <img class="w_100 h_100" alt="@item.dorename" title="@item.dorename" src="@item.doreimageurl">
+                                            </div>
+                                            <div class="content balapost">
+                                                <div class="header txtright font_14">
+                                                    <h2 class="txtright coloblack font_14 h2post">@item.dorename</h2>
+                                                </div>
+                                                <div class="description txtright">
+                                                    <a title="@item.dorename" class="textblack">@item.doremodars</a>
+                                                </div>
+                                            </div>
+                                            <div class="extra content">
+                                                @if (item.dorebargozary == true)
+                                                {
+                                                    <span class="right floated span1post">به اتمام رسیده</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="right floated span1post">درحال برگزاری</span>
+                                                }
+                                                @if (item.dorehgaymat == 0)
+                                                {
+                                                    <span class="span2post">
+                                                        رایگان
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="span2post">
+                                                        @item.dorehgaymat تومان
+                                                    </span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            a++;
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </section>
+    <section class="sec3">
+        <div class=" ui container">
+            <h2 class="h2sartitr textcenter">مقالات</h2>
+            <div class="gridkhodam">
+                @foreach (var item in Model.blogmaghales)
+                {
+                    <div class="col_6">
+                        <div class="ui card w_100">
+                            <a title="@item.titr" class="image" href="/blog/@(item.blogmaghaleid)">
+                                <img class="w_100 h_100" alt="@item.titr" title="@item.titr" src="@(item.urlimage)">
+                            </a>
+                            <div class="content">
+                                <a title="@item.titr" class="header txtright" href="/blog/@(item.blogmaghaleid)">@item.titr</a>
+                                <div class="meta txtright marginmaghale">
+                                    <a title="@item.titr" href="/blog/@(item.blogmaghaleid)" class="txtright marginmaghale">
+                                        @Html.Raw(item.matnkootahblog)
+                                    </a>
+                                    <p class="marginmaghale">@item.usernamemodars<i class="user outline icon"></i> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="ui container">
+            <h2 class="h2sartitr textcenter">پر طرفدار ترین دوره ها</h2>
+            <div class="gridkhodam">
+                @{int b = 0;
+                    foreach (var item in Model.portarafdardore)
+                    {
+                        if (b % 4 == 0)
+                        {
+                            <div class="col_bala">
+                                <div class="ui link cards tooltip">
+                                    <div class="tooltiptext navlayoutbala">
+                                        <div class="containerkhodam">
+                                            <h3 class="txtright">@item.dorename</h3>
+                                            <p class="txtright">آخرین بروزرسانی :@item.doreakharinberoozresany</p>
+                                            <p class="txtright fontsize_14">تعداد جلسات تدریس:@item.doretedadgalase جلسه</p>
+                                            <p class="txtright fontsize_14">سطح دوره : @item.doresath</p>
+                                            <p class="txtright">
+                                                @item.shortmatn
+                                            </p>
+                                            <a title="@item.dorename" href="/dore/@(item.doreid)"><button class="positive ui button">ادامه مطلب</button></a>
+                                        </div>
+                                    </div>
+                                    <a title="@item.dorename" href="/dore/@(item.doreid)">
+                                        <div class="card w_100">
+                                            <div class="image">
+                                                <img class="w_100 h_100" alt="@item.dorename" title="@item.dorename" src="@item.doreimageurl">
+                                            </div>
+                                            <div class="content balapost">
+                                                <div class="header txtright font_14">
+                                                    <h2 class="txtright coloblack coloblack font_14 h2post">@item.dorename</h2>
+                                                </div>
+                                                <div class="description txtright">
+                                                    <a title="@item.dorename" class="textblack">@item.doremodars</a>
+                                                </div>
+                                            </div>
+                                            <div class="extra content">
+                                                @if (item.dorebargozary == true)
+                                                {
+                                                    <span class="right floated span1post">به اتمام رسیده</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="right floated span1post">درحال برگزاری</span>
+                                                }
+                                                @if (item.dorehgaymat == 0)
+                                                {
+                                                    <span class="span2post">
+                                                        رایگان
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="span2post">
+                                                        @item.dorehgaymat تومان
+                                                    </span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            b++;
+                        }
+                        else
+                        {
+                            <div class="col_bala">
+                                <div class="ui link cards tooltip2">
+                                    <div class="tooltiptext2">
+                                        <div class="containerkhodam">
+                                            <h3 class="txtright">@item.dorename</h3>
+                                            <p class="txtright">آخرین بروزرسانی :@item.doreakharinberoozresany</p>
+                                            <p class="txtright fontsize_14">تعداد جلسات تدریس:@item.doretedadgalase جلسه</p>
+                                            <p class="txtright fontsize_14">سطح دوره : @item.doresath</p>
+                                            <p class="txtright">
+                                                @item.shortmatn
+                                            </p>
+                                            <a title="@item.dorename" href="/dore/@(item.doreid)"><button class="positive ui button">ادامه مطلب</button></a>
+                                        </div>
+                                    </div>
+                                    <a title="@item.dorename" href="/dore/@(item.doreid)">
+                                        <div class="card w_100">
+                                            <div class="image">
+                                                <img class="w_100 h_100" alt="@item.dorename" title="@item.dorename" src="@item.doreimageurl">
+                                            </div>
+                                            <div class="content balapost">
+                                                <div class="header txtright font_14">
+                                                    <h2 class="txtright font_14 coloblack h2post">@item.dorename</h2>
+                                                </div>
+                                                <div class="description txtright">
+                                                    <a title="@item.dorename" class="textblack">@item.doremodars</a>
+                                                </div>
+                                            </div>
+                                            <div class="extra content">
+                                                @if (item.dorebargozary == true)
+                                                {
+                                                    <span class="right floated span1post">به اتمام رسیده</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="right floated span1post">درحال برگزاری</span>
+                                                }
+                                                @if (item.dorehgaymat == 0)
+                                                {
+                                                    <span class="span2post">
+                                                        رایگان
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="span2post">
+                                                        @item.dorehgaymat تومان
+                                                    </span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            b++;
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </section>
+</cache>
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchsoal").autocomplete({
+                source: '/api/soalapisearch/Searchindex'
+            });
+        });
+    </script>
+}

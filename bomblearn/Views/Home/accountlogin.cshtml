@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="ui mini modal" id="modal1">
+    <div class="header txtright">
+        عملیات با موفقیت انجام شد
+    </div>
+    <div class="content">
+        <p class="txtright">بعد از چند ثانیه به صفحه اصلی راهنمایی میشوید</p>
+    </div>
+    <div class="actions">
+        <div class="ui positive right labeled icon button">
+            <a href="/index">صفحه اصلی</a>
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+<div class="ui mini modal" id="modal2">
+    <div class="header txtright">
+        عملیات ناموفق بود
+    </div>
+    <div class="content">
+        <p class="txtright">اکانتی با این کد پیدا نشد /اکانت قبلا اکتیو شده است</p>
+    </div>
+    <div class="actions">
+        <div class="ui negative right labeled icon button">
+            <a href="/index">صفحه اصلی</a>
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @if (ViewBag.login == 1)
+    {
+        <script>
+            $('#modal1')
+                .modal('show')
+                ;
+            // Your delay in milliseconds
+            var delay = 4000;
+            setTimeout(function () { window.location = "/index"; }, delay);
+        </script>
+    }
+    @if (ViewBag.login == 2)
+    {
+        <script>
+            $('#modal2')
+                .modal('show')
+                ;
+            // Your delay in milliseconds
+            var delay = 6000;
+            setTimeout(function () { window.location = "/index"; }, delay);
+        </script>
+    }
+}

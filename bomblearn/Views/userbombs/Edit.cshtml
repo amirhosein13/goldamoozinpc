@@ -1,0 +1,58 @@
+﻿@model layedata.userbomb
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>userbomb</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="userid" />
+            <div class="form-group">
+                <label asp-for="username" class="control-label"></label>
+                <input asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userpassword" class="control-label"></label>
+                <input asp-for="userpassword" class="form-control" />
+                <span asp-validation-for="userpassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="useremail" class="control-label"></label>
+                <input asp-for="useremail" class="form-control" />
+                <span asp-validation-for="useremail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="useractivatecode" class="control-label"></label>
+                <input asp-for="useractivatecode" class="form-control" />
+                <span asp-validation-for="useractivatecode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="useractiveaya" /> @Html.DisplayNameFor(model => model.useractiveaya)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="roleid" class="control-label"></label>
+                <select asp-for="roleid" class="form-control" asp-items="ViewBag.roleid"></select>
+                <span asp-validation-for="roleid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bomblearn", "bomblearn\bomblearn.csproj", "{7816FA08-381A-479A-8776-5BE6D97CCAA9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "layedata", "layedata\layedata.csproj", "{26485D6F-2B05-46FD-B01D-6805E9FB1626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datacore", "datacore\datacore.csproj", "{0448AACD-F223-444D-B225-3333D7209136}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7816FA08-381A-479A-8776-5BE6D97CCAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7816FA08-381A-479A-8776-5BE6D97CCAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7816FA08-381A-479A-8776-5BE6D97CCAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7816FA08-381A-479A-8776-5BE6D97CCAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26485D6F-2B05-46FD-B01D-6805E9FB1626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26485D6F-2B05-46FD-B01D-6805E9FB1626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26485D6F-2B05-46FD-B01D-6805E9FB1626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26485D6F-2B05-46FD-B01D-6805E9FB1626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0448AACD-F223-444D-B225-3333D7209136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0448AACD-F223-444D-B225-3333D7209136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0448AACD-F223-444D-B225-3333D7209136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0448AACD-F223-444D-B225-3333D7209136}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D93DBFD3-04E8-4240-8352-B4EEFB5568B4}
+	EndGlobalSection
+EndGlobal

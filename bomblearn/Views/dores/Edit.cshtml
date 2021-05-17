@@ -1,0 +1,102 @@
+﻿@model layedata.dore
+
+@{
+    ViewData["Title"] = "Edit";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<div class="ui container txtright">
+    <h2>تغییر</h2>
+
+    <h4>دوره</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="doreid" />
+                <div class="form-group">
+                    <label asp-for="dorename" class="control-label"></label>
+                    <input asp-for="dorename" class="form-control" />
+                    <span asp-validation-for="dorename" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="doremodars" class="control-label"></label>
+                    <input asp-for="doremodars" class="form-control" />
+                    <span asp-validation-for="doremodars" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dorehgaymat" class="control-label"></label>
+                    <input asp-for="dorehgaymat" class="form-control" />
+                    <span asp-validation-for="dorehgaymat" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="shortmatn" class="control-label"></label>
+                    <input asp-for="shortmatn" class="form-control" />
+                    <span asp-validation-for="shortmatn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="dorebargozary" /> @Html.DisplayNameFor(model => model.dorebargozary)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group hidden">
+                    <label asp-for="doretedadgalase" class="control-label"></label>
+                    <input asp-for="doretedadgalase" class="form-control" />
+                    <span asp-validation-for="doretedadgalase" class="text-danger"></span>
+                </div>
+                <div class="form-group hidden">
+                    <label asp-for="doretedaddaneshamooz" class="control-label"></label>
+                    <input asp-for="doretedaddaneshamooz" class="form-control" />
+                    <span asp-validation-for="doretedaddaneshamooz" class="text-danger"></span>
+                </div>
+                <div class="form-group hidden">
+                    <label asp-for="doretedadsaatbargozary" class="control-label"></label>
+                    <input asp-for="doretedadsaatbargozary" class="form-control" />
+                    <span asp-validation-for="doretedadsaatbargozary" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="doresath" class="control-label"></label>
+                    <input asp-for="doresath" class="form-control" />
+                    <span asp-validation-for="doresath" class="text-danger"></span>
+                </div>
+                <div class="form-group hidden">
+                    <label asp-for="doreakharinberoozresany" class="control-label"></label>
+                    <input asp-for="doreakharinberoozresany" class="form-control" />
+                    <span asp-validation-for="doreakharinberoozresany" class="text-danger"></span>
+                </div>
+                <div class="form-group hidden">
+                    <label asp-for="doreimageurl" class="control-label"></label>
+                    <input asp-for="doreimageurl" class="form-control" />
+                    <span asp-validation-for="doreimageurl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dorematn" class="control-label"></label>
+                    <textarea asp-for="dorematn" class="form-control"></textarea>
+                    <span asp-validation-for="dorematn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div>
+        <a asp-action="Index">برگشتن به لیست</a>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckeditor/adapters/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#dorematn').ckeditor();
+        });
+    </script>
+}

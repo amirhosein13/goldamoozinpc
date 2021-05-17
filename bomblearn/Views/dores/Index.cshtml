@@ -1,0 +1,71 @@
+﻿@model IEnumerable<layedata.dore>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="ui container">
+    <h2>دوره های شما</h2>
+
+    <p>
+        <a class="button" asp-action="Create">ساختن یک دوره جدید</a>
+    </p>
+    <div class="gridkhodam">
+        @if (ViewBag.vogodasht == true)
+        {
+            @foreach (var item in Model)
+            {
+
+                <div class="col_bala">
+                    <div class="ui link cards">
+                        <div class="card w_100">
+                            <div class="image">
+                                <img alt="" title="" src="~/data/img/blake-connally-B3l0g6HLxr8-unsplash.jpg">
+                            </div>
+                            <div class="content balapost">
+                                <div>
+                                    <div class="containerkhodam">
+                                        <h3 class="txtright">@item.dorename </h3>
+                                        <p class="txtright">آخرین بروزرسانی :@item.doreakharinberoozresany</p>
+                                        <p class="txtright fontsize_14">تعداد جلسات تدریس: @item.doretedadgalase جلسه</p>
+                                        <p class="txtright fontsize_14">سطح دوره : @item.doresath</p>
+                                        <p class="txtright fontsize_14">مدرس دوره : @item.doremodars</p>
+                                        <p class="txtright fontsize_14">تعداد دانش آموز دوره : @item.doretedaddaneshamooz</p>
+                                        <h3 class="txtright">
+                                            @item.shortmatn
+                                        </h3>
+                                        <button class="positive ui button w_100">ادامه مطلب</button>
+                                        <a asp-action="Edit" asp-route-id="@item.doreid"> <button class="positive ui button w_100"> تغییر</button></a>
+                                        <a asp-action="Details" asp-route-id="@item.doreid"><button class="positive ui button w_100">اطلاعات</button></a>
+                                        <a href="/videodore/@(item.doreid)"><button class="positive ui button w_100">ویدوعو ها</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                @{ if (item.dorebargozary == true)
+                                    {
+                                        <span class="right floated span1post">به اتمام رسیده</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="right floated span1post">درحال برگزاری</span>
+                                    }
+                                }
+                                <span class="span2post">
+                                    @item.dorehgaymat تومان
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+        }
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+}

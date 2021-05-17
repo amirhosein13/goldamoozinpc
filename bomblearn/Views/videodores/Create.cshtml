@@ -1,0 +1,60 @@
+﻿@model layedata.videodore
+
+@{
+    ViewData["Title"] = "Create";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<div class="container txtright">
+    <h2>Create</h2>
+
+    <h4>videodore</h4>
+    <hr />
+    <div class="row">
+        <div class="w_100">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="videoname" class="control-label"></label>
+                    <input asp-for="videoname" class="form-control" />
+                    <span asp-validation-for="videoname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="videomatn" class="control-label"></label>
+                    <textarea asp-for="videomatn" class="form-control"></textarea>
+                    <span asp-validation-for="videomatn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="urlvideo" class="control-label"></label>
+                    <input asp-for="urlvideo" type="file" name="imageup" class="form-control" />
+                    <span asp-validation-for="urlvideo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="doreid" class="control-label"></label>
+                    <select asp-for="doreid" class="form-control" asp-items="ViewBag.doreid"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+
+</div>
+
+
+@section Scripts{
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckeditor/adapters/jquery.js"></script>
+    <script>
+            $(function () {
+                $('#videomatn').ckeditor();
+            });
+    </script>
+}

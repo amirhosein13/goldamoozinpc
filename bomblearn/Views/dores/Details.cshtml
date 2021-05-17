@@ -1,0 +1,97 @@
+﻿@model layedata.dore
+
+@{
+    ViewData["Title"] = "Details";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<div class="ui container txtright">
+    <h2>اطلاعات</h2>
+
+    <div>
+        <h4>دوره</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.dorename)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.dorename)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.doremodars)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.doremodars)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.dorehgaymat)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.dorehgaymat)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.dorebargozary)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.dorebargozary)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.doretedadgalase)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.doretedadgalase)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.doretedaddaneshamooz)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.doretedaddaneshamooz)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.doretedadsaatbargozary)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.doretedadsaatbargozary)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.doresath)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.doresath)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.doreakharinberoozresany)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.doreakharinberoozresany)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.doreimageurl)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.doreimageurl)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.dorematn)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.dorematn)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.shortmatn)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.shortmatn)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.doreid">تغییر</a> |
+        <a asp-action="Index">برگشتن به لیست</a>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+}

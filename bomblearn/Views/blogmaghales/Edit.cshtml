@@ -1,0 +1,59 @@
+﻿@model layedata.blogmaghale
+
+@{
+    ViewData["Title"] = "Edit";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<div class="container txtright">
+    <h2>Edit</h2>
+
+    <h4>blogmaghale</h4>
+    <hr />
+    <div class="row">
+        <div class="w_100">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="blogmaghaleid" />
+                <div class="form-group">
+                    <label asp-for="titr" class="control-label"></label>
+                    <input asp-for="titr" class="form-control" />
+                    <span asp-validation-for="titr" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="matnkootahblog" class="control-label"></label>
+                    <input asp-for="matnkootahblog" class="form-control" />
+                    <span asp-validation-for="matnkootahblog" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="matnkamelblog" class="control-label"></label>
+                    <input asp-for="matnkamelblog" class="form-control" />
+                    <span asp-validation-for="matnkamelblog" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="userid" class="control-label"></label>
+                    <input asp-for="userid" class="form-control" />
+                    <span asp-validation-for="userid" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckeditor/adapters/jquery.js"></script>
+    <script>
+            $(function () {
+                $('#matnkamelblog').ckeditor();
+            });
+    </script>
+}
+

@@ -1,0 +1,54 @@
+﻿@model layedata.userbomb
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>userbomb</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.userpassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.userpassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.useremail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.useremail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.useractivatecode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.useractivatecode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.useractiveaya)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.useractiveaya)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.role)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.role.rolename)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.userid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

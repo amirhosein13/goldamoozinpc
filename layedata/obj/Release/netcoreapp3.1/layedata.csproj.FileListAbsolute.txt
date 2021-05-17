@@ -1,0 +1,99 @@
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.deps.json
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.json
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.dev.json
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Extensions.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.xml
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.xml
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.xml
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.xml
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.xml
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csprojAssemblyReference.cache
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfoInputs.cache
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfo.cs
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CoreCompileInputs.cache
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CopyComplete
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.dll
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amir hossein aziz\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.genruntimeconfig.cache
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.deps.json
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.json
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.dev.json
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Extensions.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.xml
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.xml
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.xml
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.xml
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.xml
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfoInputs.cache
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfo.cs
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CoreCompileInputs.cache
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CopyComplete
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.dll
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.genruntimeconfig.cache
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.deps.json
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.json
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.dev.json
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Extensions.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.xml
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.xml
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.xml
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.xml
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.xml
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfoInputs.cache
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfo.cs
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CoreCompileInputs.cache
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CopyComplete
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.dll
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.genruntimeconfig.cache
+C:\Users\amirh\OneDrive\Desktop\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csprojAssemblyReference.cache
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.deps.json
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.json
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.runtimeconfig.dev.json
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Extensions.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Mvc.xml
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.xml
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Razor.xml
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.Razor.xml
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\bin\Release\netcoreapp3.1\System.Web.WebPages.Deployment.xml
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfoInputs.cache
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.AssemblyInfo.cs
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CoreCompileInputs.cache
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csproj.CopyComplete
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.dll
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.pdb
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.genruntimeconfig.cache
+C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csprojAssemblyReference.cache

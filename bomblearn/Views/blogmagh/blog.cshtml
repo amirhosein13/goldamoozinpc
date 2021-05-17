@@ -1,0 +1,15 @@
+﻿@model layedata.blogmaghale
+@section css{
+    <link href="~/data/css/cssdore.css" rel="stylesheet" />
+}
+<section class="ui container margin60">
+    <h2 class="txtright">@Model.titr</h2>
+    <div class="ui container">
+        <div class="w_100">
+            <img class="w_100" src="@(Model.urlimage)" alt="@Model.titr" title="@Model.titr">
+        </div>
+        <article class="txtright">
+            @Html.Raw(Model.matnkamelblog)
+        </article>
+    </div>
+</section>

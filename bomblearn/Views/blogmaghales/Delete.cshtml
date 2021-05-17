@@ -1,0 +1,47 @@
+﻿@model layedata.blogmaghale
+
+@{
+    ViewData["Title"] = "Delete";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>blogmaghale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.titr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.matnkootahblog)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.matnkootahblog)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.matnkamelblog)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.matnkamelblog)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.userid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.userid)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="blogmaghaleid" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

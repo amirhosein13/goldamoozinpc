@@ -1,0 +1,82 @@
+﻿@model layedata.dore
+
+@{
+    ViewData["Title"] = "Create";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<div class="container txtright">
+
+    <h2>Create</h2>
+
+    <h4>dore</h4>
+    <hr />
+    <div class="row">
+        <div class="w_100">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="dorename" class="control-label"></label>
+                    <input asp-for="dorename" class="form-control" />
+                    <span asp-validation-for="dorename" class="text-danger"></span>
+                </div>
+                <div class="form-group d-none">
+                    <label asp-for="doremodars" class="control-label"></label>
+                    <input asp-for="doremodars" value="@(User.Identity.Name)" class="form-control" />
+                    <span asp-validation-for="doremodars" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dorehgaymat" class="control-label"></label>
+                    <input asp-for="dorehgaymat" class="form-control" />
+                    <span asp-validation-for="dorehgaymat" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="dorebargozary" /> @Html.DisplayNameFor(model => model.dorebargozary)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="doresath" class="control-label"></label>
+                    <input asp-for="doresath" class="form-control" />
+                    <span asp-validation-for="doresath" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="doreimageurl" class="control-label"></label>
+                    <input asp-for="doreimageurl" type="file" name="imageup" class="form-control" />
+                    <span asp-validation-for="doreimageurl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dorematn" class="control-label"></label>
+                    <textarea asp-for="dorematn" class="form-control"></textarea>
+                    <span asp-validation-for="dorematn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="shortmatn" class="control-label"></label>
+                    <input asp-for="shortmatn" class="form-control" />
+                    <span asp-validation-for="shortmatn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+
+</div>
+@section Scripts{
+        <script src="~/ckeditor/ckeditor.js"></script>
+        <script src="~/ckeditor/adapters/jquery.js"></script>
+        <script>
+            $(function () {
+                $('#dorematn').ckeditor();
+            });
+        </script>
+}

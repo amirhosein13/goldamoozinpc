@@ -1,0 +1,92 @@
+﻿@model List<soal>
+
+@section css{
+    <link href="~/data/css/soalcss.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+}
+<div class="ui mini modal" id="modal1">
+    <div class="header colorred txtright">
+        فرایند ثبت سوال با مشکل مواجه شد
+    </div>
+    <div class="content">
+        <p class="txtright">لطفا وارد دوره مورد نظر شده و از آنجا سوال بپرسید</p>
+    </div>
+</div>
+<section>
+    <div class="ui container">
+        <div class="divsoal">
+            <form action="/soalsearch" method="post">
+                <div class="container w_100">
+                    <div class="ui w_100 icon input">
+                        <input style="padding-right: 40px !important;" class="paddingh3dore prompt txtright inputsoalsearch inputindexsearchbala" id="searchsoal" name="searchinput" type="text" placeholder="ببین سوالت قبلا پرسیده شده ؟">
+                        <button class="btnsearchinputbalaindex"> <i class="search icon"></i></button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="w_100 textcenter">
+                @if (Model != null)
+                {
+                    <p>تعداد سوالات مطرح شده :@Model.Count()</p>
+                }
+                else
+                {
+                    <p>تعداد سوالات مطرح شده :0</p>
+                }                <button class="ui inverted green button" id="soalcreateall">ثبت سوال جدید</button>
+            </div>
+        </div>
+        <div class="ui cards gridkhodam">
+            @if (Model != null)
+            {
+
+                @foreach (var item in Model)
+                {
+                    <div class="colsoalkoly">
+                        <a href="/question/@(item.soalid)">
+                            <div class="ui link card w_100">
+
+                                <div class="content">
+                                    <h2 class="txtright header titrsoalhame containerkhodam coloblack">@item.soaltitr</h2>
+                                    <div class="meta txtright">
+                                        <p class="fontsize12">@item.Dore.dorename</p>
+                                    </div>
+
+                                    <hr>
+                                    <a href="/question/@(item.soalid)"><button class="ui floatleft primary basic button clbtnfllsoal">دیدن سوال</button> </a>
+                                    @if (item.Javabs.Count == 0)
+                                    {
+                                        <button class="ui float_right negative basic button clbtnfllsoal">پاسخی ثبت نشده است</button>
+                                    }
+                                    else
+                                    {
+                                        <button class="ui float_right positive basic button clbtnfllsoal">پاسخی ثبت شده است</button>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+
+            }
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchsoal").autocomplete({
+                source: '/api/soalapisearch/search'
+            });
+        });
+        $("#soalcreateall").click(function () {
+            $('#modal1')
+                .modal('show')
+                ;
+            $('#adownload').click(function (e) {
+                $('#modal2').modal('show');
+            });
+        });
+    </script>
+
+}

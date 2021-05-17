@@ -1,0 +1,72 @@
+﻿@model soal
+@section css{
+    <link href="~/data/css/soalcss.css" rel="stylesheet" />
+}
+<section class="sec2soalcreate">
+    <div class="ui container txtright">
+        <h1 class="txtright">
+            @Model.soaltitr
+        </h1>
+        <p class="txtright">
+            @Model.Dore.dorename
+        </p>
+        <div class="borderdivsoal">
+            <p class="txtright">
+                @Model.soalmatn
+            </p>
+            @if (Model.zamimesoal != null)
+            {
+                <a href="@(Model.zamimesoal)"><button class="ui inverted green button">فایل ضمیمه</button></a>
+            }
+        </div>
+        @foreach (var item in Model.Javabs)
+        {
+            <h2 class="txtright">
+                @item.javabdahande
+            </h2>
+            @if (item.modarsgofte.Value)
+            {
+                <p class="txtright">
+                    مدرس
+                </p>
+            }
+            else
+            {
+                <p class="txtright">
+                    دانش آموز
+                </p>
+            }
+            
+            <div class="borderdivsoal display_grid">
+                <p class="txtright">
+                    @item.javabmatn
+                </p>
+                @if (item.zamimejavab != null)
+                {
+                    <a href="@(item.zamimejavab)"><button class="ui inverted green button">فایل ضمیمه</button></a>
+                }
+                @if (item.pasokhdorostnood != true)
+                {
+                    <a href="/javabsahihbood?idsoal=@(Model.soalid)&idjavab=@(item.javabid)"><button class="ui floatleft inverted green button">جواب صحیح بود</button></a>
+                }
+            </div>
+        }
+
+        <h3>ثبت جواب</h3>
+        <div asp-validation-summary="All" class="txtdanger txtright"></div>
+        <form asp-action="javabcreate" method="post" enctype="multipart/form-data">
+            <label for="fname">متن جواب</label>
+            <textarea asp-for="Javabs.FirstOrDefault().javabmatn" class="txtright heighttextareasoal" id="subject"
+                      placeholder="متن جواب"></textarea>
+            <label for="lname txtright">
+                فایل پیوست (حجم فایل باید کمتر از 2 مگابایت باشد در غیر اینصورت
+                ازسال نمیشود)
+            </label>
+            <br>
+            <input asp-for="Javabs.FirstOrDefault().soalid" class="inpsoalcre d_none dis txtright" type="text" id="lname" value="@(Model.soalid)">
+            <input class="inpsoalcre txtright" type="file" id="lname" name="imageup">
+            <br>
+            <input type="submit" value="ثبت">
+        </form>
+    </div>
+</section>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<layedata.userbomb>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.userpassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.useremail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.useractivatecode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.useractiveaya)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.role)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userpassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.useremail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.useractivatecode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.useractiveaya)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.role.rolename)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.userid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.userid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.userid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

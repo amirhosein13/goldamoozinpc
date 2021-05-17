@@ -1,0 +1,38 @@
+﻿@model layedata.videodore
+
+@{
+    ViewData["Title"] = "Details";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<h2>Details</h2>
+
+<div>
+    <h4>videodore</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.videoname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.videoname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.urlvideo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.urlvideo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.dore.dorename)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.videoid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

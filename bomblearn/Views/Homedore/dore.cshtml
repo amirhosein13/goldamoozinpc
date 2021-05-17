@@ -1,0 +1,240 @@
+﻿@model doreindexpage
+@section css{
+    <link href="~/data/css/cssdore.css" rel="stylesheet" />
+    <link href="~/data/css/soalcss.css" rel="stylesheet" />
+}
+@if (ViewBag.kharid == 1)
+{
+    <div class="ui mini modal" id="modal1">
+        <div class="header colorred txtright">
+            خرید دوره با موفقیت انجام نشد
+        </div>
+        <div class="content">
+            <p class="txtright">در صورت بروز هر مشکلی به ما تیکت بزنید</p>
+        </div>
+    </div>
+}
+else if (ViewBag.kharid == 2)
+{
+    <div class="ui mini modal" id="modal1">
+        <div class="header colorgreen txtright">
+            خرید دوره با موفقیت انجام شد
+        </div>
+        <div class="content">
+            <p class="txtright">در صورت بروز هر مشکلی به ما تیکت بزنید</p>
+        </div>
+    </div>
+}
+@if (ViewBag.dastres == false)
+{
+    <div class="ui mini modal" id="modal2">
+        <div class="header colorgreen txtright">
+            لطفا برای دانلود این قسمت دوره را خریداری کنید
+        </div>
+        <div class="content">
+            <p class="txtright">در صورت بروز هر مشکلی به ما تیکت بزنید</p>
+        </div>
+    </div>
+}
+<section class="ui container margin60">
+    <div class="col16 margin60">
+        <h1 class="txtright"> @Model.dorea.dorename </h1>
+    </div>
+    <div class="gridkhodam">
+        <div class="ui link cards col3dore">
+            <div class="card carddore w_100">
+                <div>
+                    <div class="containerkhodam">
+                        <h3 class="txtright"> @Model.dorea.dorename </h3>
+                        <p class="txtright fontsize_14"> مدرس دوره : @Model.dorea.doremodars</p>
+                        <p class="txtright fontsize_14">آخرین بروزرسانی :@Model.dorea.doreakharinberoozresany</p>
+                        <p class="txtright fontsize_14">تعداد جلسات تدریس:@Model.dorea.doretedadgalase جلسه</p>
+                        <p class="txtright fontsize_14">سطح دوره : @Model.dorea.doresath</p>
+                        @if (Model.dorea.dorebargozary)
+                        {
+                            <p class="txtright fontsize_14"> وضعیت دوره : به اتمام رسیده </p>
+                        }
+                        else
+                        {
+                            <p class="txtright fontsize_14"> وضعیت دوره : در حال برگزاری</p>
+                        }
+                        @if (Model.dorea.dorehgaymat != 0)
+                        {
+                            <a href="/payment/@(Model.dorea.doreid)"><button class="positive ui button">خرید</button></a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="w_100 containerkhodam textcenter">
+                <a href="/soal/@(Model.dorea.doreid)">
+                    <button class="ui w_100 ui violet button">پرسش سوال درباره این دوره</button>
+                </a>
+            </div>
+        </div>
+        <Article class="col9dore">
+            <div class="img-layer">
+                <img class="w_100" src="@(Model.dorea.doreimageurl)" alt="@Model.dorea.dorename" title="@Model.dorea.dorename">
+            </div>
+            <h2>@Model.dorea.dorename</h2>
+            @Html.Raw(Model.dorea.dorematn)
+        </Article>
+    </div>
+</section>
+<section class="ui container">
+    <div class="paddingfehrestdore paddingsec2dore sec3dore">
+        <h3 class="float_right"> فهرستـــ ویدیوها </h3>
+        <span class="floatleft"> تعداد قسمت ها: <i>@Model.dorea.doretedadgalase</i></span>
+    </div>
+    <div class="gridkhodam">
+        @{ int a = 0;
+            int b = 1;
+            foreach (var item in Model.videodore)
+            {
+                if (a < 3 && Model.dorea.dorehgaymat != 0)
+                {
+                    <div class="ui link cards colgalasedore">
+                        <div class="card carddore w_100">
+                            <div>
+                                <div class="containerkhodam">
+                                    <span class="addadvideo">@b</span>
+                                    <h3 class="txtright paddingh3dore">
+                                        <span class="colorgreen floatleft">رایگان</span><a class="coloblack" href="/video/@(item.videoid)">@item.videoname</a>
+                                    </h3>
+                                    <a href="@(item.urlvideo)"><button class="positive ui button">دانلود</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    a++;
+                }
+                else if (Model.dorea.dorehgaymat != 0)
+                {
+                    <div class="ui link cards colgalasedore">
+                        <div class="card carddore w_100">
+                            <div>
+                                <div class="containerkhodam">
+                                    <span class="addadvideo">@b</span>
+                                    <h3 class="txtright paddingh3dore">
+                                        <span class="colorgreen floatleft">نقدی</span><a class="coloblack" href="/video/@(item.videoid)">@item.videoname</a>
+                                    </h3>
+                                    @if (ViewBag.dastres == true)
+                                    {
+                                        <a href="@(item.urlvideo)"><button class="positive ui button">دانلود</button></a>
+                                    }
+                                    else
+                                    {
+                                        <a id="adownload"><button class="positive ui button">دانلود</button></a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="ui link cards colgalasedore">
+                        <div class="card carddore w_100">
+                            <div>
+                                <div class="containerkhodam">
+                                    <span class="addadvideo">@b</span>
+                                    <h3 class="txtright paddingh3dore">
+                                        <span class="colorgreen floatleft">رایگان</span><a class="coloblack" href="/video/@(item.videoid)">@item.videoname</a>
+                                    </h3>
+                                    <a href="@(item.urlvideo)"><button class="positive ui button">دانلود</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                b++;
+            }
+        }
+    </div>
+</section>
+<section class="ui container txtright">
+    <div asp-validation-summary="All" class="txtdanger txtright"></div>
+    <form asp-action="createnazar" method="post">
+        <label for="fname">متن نظر</label>
+        <textarea asp-for="nazaratsvm.FirstOrDefault().matnnazar" class="txtright heighttextareasoal" id="subject"
+                  placeholder="متن نظر"></textarea>
+        <br>
+        <input asp-for="nazaratsvm.FirstOrDefault().doreid" class="inpsoalcre d_none dis txtright" type="text" id="lname" value="@(Model.dorea.doreid)"/>
+        <br>
+        <input type="submit" value="ثبت">
+    </form>
+</section>
+
+<section class="ui container">
+    @foreach (var item in Model.nazaratsvm)
+    {
+        <div class="w_100 divjavab">
+            <div class="classnazardore">
+                <h3 class="txtright">@item.nameuser</h3>
+                <div class="containerkhodam">
+                    <div class="w_100">
+                        <div class="classnazardore">
+                            <p class="txtright">
+                                @item.matnnazar
+                            </p>
+                            @if (ViewBag.isteacher)
+                            {
+                                <button class="ui positive basic button">پاسخ دادن</button>
+                                <a href="/deletenazar?idnazar=@(item.nazaratid)&&iddore=@(item.doreid)"><button class="ui negative basic button">حذف کردن</button></a>
+
+                            }
+                        </div>
+                        @foreach (var itema in item.Nazarostads)
+                        {
+                            <h3 class="txtright">@itema.nameostad</h3>
+                            <p class="txtright">مدرس</p>
+                            <div class="containerkhodam">
+                                <div class="w_100">
+                                    <div class="classnazardore">
+                                        <p class="txtright">
+                                            @itema.matnnazarostad
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</section>
+@if (ViewBag.kharid == 1 || ViewBag.kharid == 2 && ViewBag.dastres == false)
+{
+    @section Scripts{
+        <script>
+            $('#modal1')
+                .modal('show')
+                ;
+            $('#adownload').click(function (e) {
+                $('#modal2').modal('show');
+            });
+        </script>
+    }
+
+}
+else if (ViewBag.dastres == false)
+{
+    @section Scripts{
+        <script>
+            $("#adownload").click(function (e) {
+                $('#modal2').modal('show');
+            });
+        </script>
+    }
+}
+else if (ViewBag.kharid == 1 || ViewBag.kharid == 2)
+{
+    @section Scripts{
+        <script>
+            $('#modal1')
+                .modal('show')
+                ;
+        </script>
+    }
+}

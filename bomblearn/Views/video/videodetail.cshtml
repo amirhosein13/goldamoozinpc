@@ -1,0 +1,151 @@
+﻿@model vmvideopage
+
+@section css{
+    <link href="~/data/css/cssdore.css" rel="stylesheet" />
+    <link href="~/data/css/soalcss.css" rel="stylesheet" />
+}
+
+<section class="ui container sec1">
+    <H1 class="textcenter">@Model.videodorea.videoname</H1>
+    <div class="ui link cards cardvideo">
+        <div class="card carddore w_100">
+            <div>
+                @if (Model.dorea.dorehgaymat != 0)
+                {
+                    <div class="containerkhodam">
+                        <span class="addadvideo">1</span>
+                        <h3 class="txtright paddingh3dore">
+                            <span class="colorgreen floatleft">نقدی</span>@Model.videodorea.videoname
+                        </h3>
+                        @if (ViewBag.dastres == true)
+                        {
+                            <a href="@(Model.videodorea.videoname)"><button class="positive ui button">دانلود</button></a>
+                        }
+                        else
+                        {
+                            <a id="adownload"><button class="positive ui button">دانلود</button></a>
+                        }
+
+
+
+                    </div>
+                }
+                else
+                {
+                    <div class="containerkhodam">
+                        <span class="addadvideo">1</span>
+                        <h3 class="txtright paddingh3dore">
+                            <span class="colorgreen floatleft">رایگان</span>@Model.videodorea.videoname
+                        </h3>
+                        <a href="@(Model.videodorea.videoname)"><button class="positive ui button">دانلود</button></a>
+                    </div>
+
+
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ui container">
+    <div class="ui link cards cardvideo">
+        <div class="card carddore w_100">
+            <div>
+                <div class="containerkhodam txtright">
+                    <p> @Html.Raw(Model.videodorea.videomatn)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ui container margin60">
+    <div class="gridkhodam">
+        <div class="ui link cards w_100">
+            <div class="card carddore w_100">
+                <div>
+                    <div class="containerkhodam">
+                        <h3 class="txtright">@Model.dorea.dorename</h3>
+                        <p class="txtright fontsize_14"> مدرس دوره : @Model.dorea.doremodars</p>
+                        <p class="txtright fontsize_14">آخرین بروزرسانی :@Model.dorea.doremodars</p>
+                        <p class="txtright fontsize_14">تعداد جلسات تدریس:@Model.dorea.doretedadgalase جلسه</p>
+                        <p class="txtright fontsize_14">سطح دوره : @Model.dorea.doresath</p>
+                        @if (Model.dorea.dorebargozary)
+                        {
+                            <p class="txtright fontsize_14"> وضعیت دوره : به اتمام رسیده </p>
+                        }
+                        else
+                        {
+                            <p class="txtright fontsize_14"> وضعیت دوره : در حال برگزاری</p>
+                        }
+                        @if (Model.dorea.dorehgaymat != 0)
+                        {
+                            <a href="/payment/@(Model.dorea.doreid)"><button class="positive ui button">خرید</button></a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="w_100 containerkhodam textcenter">
+                <a href="/soal/@(Model.dorea.doreid)">
+                    <button class="ui w_100 ui violet button">رفتن به این دوره</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ui container txtright">
+    <div asp-validation-summary="All" class="txtdanger txtright"></div>
+    <form asp-action="createnazarvideo" method="post">
+        <label for="fname">متن نظر</label>
+        <textarea asp-for="nazaratvideo.FirstOrDefault().matnnazarvideo" name="matnnazar" class="txtright heighttextareasoal" id="subject"
+                  placeholder="متن نظر"></textarea>
+        <br>
+        <input asp-for="nazaratvideo.FirstOrDefault().videoid" name="videoid" class="inpsoalcre d_none dis txtright" type="text" id="lname" value="@(Model.videodorea.videoid)" />
+        <br>
+        <input type="submit" value="ثبت">
+    </form>
+    @foreach (var item in Model.nazaratvideo)
+    {
+        <div class="w_100 divjavab">
+            <div class="classnazardore">
+                <h3 class="txtright">@item.nameuser</h3>
+                <div class="containerkhodam">
+                    <div class="w_100">
+                        <div class="classnazardore">
+                            <p class="txtright">
+                                @item.matnnazarvideo
+                            </p>
+                            @if (ViewBag.isteacher)
+                            {
+                                <button class="ui positive basic button">پاسخ دادن</button>
+                                <a href="/deletenazar/@(item.nazaratvideoid)"><button class="ui negative basic button">حذف کردن</button></a>
+
+                            }
+                        </div>
+                        @if (item.Nazaratostadvideos != null)
+                        {
+                            @foreach (var itema in item.Nazaratostadvideos)
+                            {
+                                <h3 class="txtright">@itema.nameostad</h3>
+                                <p class="txtright">مدرس</p>
+                                <div class="containerkhodam">
+                                    <div class="w_100">
+                                        <div class="classnazardore">
+                                            <p class="txtright">
+                                                @itema.matnnazarostad
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</section>

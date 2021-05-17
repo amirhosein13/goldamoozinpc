@@ -1,0 +1,29 @@
+﻿@model List<layedata.blogmaghale>
+@section css{
+    <link href="~/data/css/cssdore.css" rel="stylesheet" />
+}
+<section class="ui container">
+    <h2></h2>
+    <h2 class="txtright margin60">مقالات گلد آموز</h2>
+    <div class="gridkhodam">
+        @foreach (var item in Model)
+        {
+            <div class="col_6">
+                <div class="ui card w_100">
+                    <a class="image" href="/blog/@(item.blogmaghaleid)" title="@item.titr">
+                        <img class="w_100 h_100" alt="@item.titr" title="@item.titr" src="@(item.urlimage)">
+                    </a>
+                    <div class="content">
+                        <a class="header txtright" title="@item.titr" href="/blog/@(item.blogmaghaleid)">@item.titr</a>
+                        <div class="meta txtright marginmaghale">
+                            <a title="@item.titr" href="/blog/@(item.blogmaghaleid)" class="txtright marginmaghale">
+                                @Html.Raw(item.matnkootahblog)
+                            </a>
+                            <p class="marginmaghale">@item.usernamemodars<i class="user outline icon"></i> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

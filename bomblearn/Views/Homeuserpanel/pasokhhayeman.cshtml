@@ -1,0 +1,134 @@
+﻿@model List<javab>
+
+@{
+    ViewData["Title"] = "سوالات من";
+}
+@section css{
+    <link rel="stylesheet" href="~/data/css/cssuserpanela.css">
+}
+<section class="ui container sec2userpanel">
+    <div class="ui grid">
+        <div class="col3">
+            <div class="kenariconcol9 floatleft">
+                <h2 class="txtright marginnone">0</h2>
+                <h4 class="txtright marginnone">دوره های من</h4>
+            </div>
+            <div class="iconlol3 float_right">
+                <i class="huge graduation cap icon card cardicon"></i>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="kenariconcol9 floatleft">
+                <h2 class="txtright marginnone">0</h2>
+                <h4 class="txtright marginnone">کیف پول من</h4>
+            </div>
+            <div class="iconlol3 float_right">
+                <i class="huge credit card icon cardicon"></i>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="kenariconcol9 floatleft">
+                <h2 class="txtright marginnone">آمیرحسین فرخنده فر</h2>
+                <h4 class="txtright marginnone">دانشجو</h4>
+            </div>
+            <div class="iconlol3 float_right">
+                <i class="huge user icon card cardicon"></i>
+            </div>
+        </div>
+        <div class="col42 right">
+            <div class="ui vertical fluid right menu">
+                <a class="item txtright active">
+                    دوره های من
+                </a>
+                <a class="item txtright">
+                    فاکتور ها
+                </a>
+                <a class="item txtright">
+                    سوالات من
+                </a>
+                <a class="item txtright activemenukenar">
+                    پاسخ های من
+                </a>
+                <a class="item txtright">
+                    تیکت های من
+                </a>
+                @if (ViewBag.isteacher)
+                {
+                    <a href="doreadmin/@(User.Identity.Name)" class="item txtright">
+                        پنل دوره های من
+                    </a>
+                }
+                <a class="item txtright">
+                    خروج از حساب کاربری
+                </a>
+            </div>
+        </div>
+        <div class="col12 stretched column">
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="txtcenter">پاسخ تایید شده؟</th>
+                            <th class="txtcenter">عنوان سوال</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    @if (item.pasokhdorostnood == true)
+                                    {
+                                        <td class="txtcenter colorgreen">بله</td>
+                                    }
+                                    else
+                                    {
+                                        <td class="txtcenter colorred">خیر</td>
+                                    }
+                                    <td class="txtcenter"><a href="/soal/@(item.soalid)">@item.Soal.soaltitr</a></td>
+                                </tr>
+                            }
+                        }
+                        <tr>
+                            <td class="txtcenter colorred">خیر</td>
+                            <td class="txtcenter"><a>استفاده از میکروفن و وب کم</a></td>
+                        </tr>
+                        <tr>
+                            <td class="txtcenter colorgreen">بله</td>
+                            <td class="txtcenter"><a>code first یا dbfirst</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col4 right">
+            <div class="ui vertical fluid right menu">
+                <a class="item txtright active">
+                    دوره های من
+                </a>
+                <a class="item txtright">
+                    فاکتور ها
+                </a>
+                <a class="item txtright">
+                    سوالات من
+                </a>
+                <a class="item txtright activemenukenar">
+                    پاسخ های من
+                </a>
+                <a class="item txtright">
+                    تیکت های من
+                </a>
+                @if (ViewBag.isteacher)
+                {
+                    <a href="doreadmin/@(User.Identity.Name)" class="item txtright">
+                        پنل دوره های من
+                    </a>
+                }
+                <a class="item txtright">
+                    خروج از حساب کاربری
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

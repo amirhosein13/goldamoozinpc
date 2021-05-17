@@ -1,0 +1,47 @@
+﻿@model layedata.soal
+
+@{
+    ViewData["Title"] = "Delete";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>soal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.soaltitr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.soaltitr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.soalmatn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.soalmatn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.zamimesoal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.zamimesoal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dore.dorematn)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="soalid" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

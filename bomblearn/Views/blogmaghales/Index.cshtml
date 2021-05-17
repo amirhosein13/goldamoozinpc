@@ -1,0 +1,56 @@
+﻿@model IEnumerable<layedata.blogmaghale>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@section css{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.titr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.matnkootahblog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.matnkamelblog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.userid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.titr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.matnkootahblog)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.matnkamelblog)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userid)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.blogmaghaleid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.blogmaghaleid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.blogmaghaleid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
