@@ -97,3 +97,4 @@ C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1
 C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.pdb
 C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.genruntimeconfig.cache
 C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csprojAssemblyReference.cache
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\layedata\obj\Release\netcoreapp3.1\layedata.csprojAssemblyReference.cache

@@ -100,7 +100,7 @@ namespace bomblearn.Controllers
                         var a = idoreintea.getdorebyid(videodore.doreid);
                         a.doretedadgalase += 1;
                         PersianCalendar pc = new PersianCalendar();
-                        a.doreakharinberoozresany = pc.GetYear(DateTime.Now).ToString() + "/index" + pc.GetMonth(DateTime.Now).ToString() + "/index" + pc.GetDayOfMonth(DateTime.Now).ToString();
+                        a.doreakharinberoozresany = pc.GetYear(DateTime.Now).ToString() + "/" + pc.GetMonth(DateTime.Now).ToString() + "/" + pc.GetDayOfMonth(DateTime.Now).ToString();
                         idoreintea.updatedore(a);
                         return Redirect("/videodore/"+videodore.doreid);
                     }
@@ -155,7 +155,7 @@ namespace bomblearn.Controllers
                 {
                     var a = idoreintea.getdorebyid(videodore.doreid);
                     PersianCalendar pc = new PersianCalendar();
-                    a.doreakharinberoozresany = pc.GetYear(DateTime.Now).ToString() + "/index" + pc.GetMonth(DateTime.Now).ToString() + "/index" + pc.GetDayOfMonth(DateTime.Now).ToString();
+                    a.doreakharinberoozresany = pc.GetYear(DateTime.Now).ToString() + "/" + pc.GetMonth(DateTime.Now).ToString() + "/" + pc.GetDayOfMonth(DateTime.Now).ToString();
                     idoreintea.updatedore(a);
                     videoa.uodatevideo(videodore);                  
                 }

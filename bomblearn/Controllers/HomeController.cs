@@ -30,6 +30,10 @@ namespace bomblearn.Controllers
         [Route("login")]
         public IActionResult login()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/index");
+            }
             ViewBag.login = 0;
             return View();
         }

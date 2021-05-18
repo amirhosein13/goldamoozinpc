@@ -992,3 +992,4 @@ C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\bomblearn\obj\Release\netcoreapp3.
 C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\bomblearn\obj\Release\netcoreapp3.1\bomblearn.pdb
 C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\bomblearn\obj\Release\netcoreapp3.1\bomblearn.genruntimeconfig.cache
 C:\Users\amirh\OneDrive\Desktop\pro\bomblearn\bomblearn\obj\Release\netcoreapp3.1\Razor\Views\video\videodetail.cshtml.g.cs
+C:\Users\amir hossein aziz\Desktop\pro\bomblearn\bomblearn\obj\Release\netcoreapp3.1\Razor\Views\video\videodetail.cshtml.g.cs
